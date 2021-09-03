@@ -14,12 +14,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet var textField: UILabel!
+    @IBOutlet var textField: UITextView!
     
     let jokeGetter = JokeGetter()
+    var settingsStorage = SettingsStorage()
     
     @IBAction func showJoke(_ sender: UIButton) {
-        jokeGetter.getJoke() { [unowned self] text in
+        jokeGetter.getJoke(settingsStorage.getSetteings()) { [unowned self] text in
             textField.text = text
         }
     }
@@ -27,7 +28,13 @@ class ViewController: UIViewController {
     func printJoke(text: String) {
         self.textField.text = text
     }
+    
+    @IBAction func showSettingsScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = storyboard.instantiateViewController(identifier: "NavigationController") as UINavigationController
+        let settingsScreen = navigationController.viewControllers.first as! SettingsViewController
+        settingsScreen.settings = settingsStorage.getSetteings()
+        settingsScreen.settingsStorage = settingsStorage
+        self.present(navigationController, animated: true, completion: nil)
+    }
 }
-
-
-

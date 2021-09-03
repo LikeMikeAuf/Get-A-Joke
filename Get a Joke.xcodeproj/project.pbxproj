@@ -15,6 +15,8 @@
 		2721585426DACEBD005A1F00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2721585226DACEBD005A1F00 /* LaunchScreen.storyboard */; };
 		2721585D26DAD262005A1F00 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721585C26DAD262005A1F00 /* Joke.swift */; };
 		2721585F26DAD401005A1F00 /* JokeGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721585E26DAD401005A1F00 /* JokeGetter.swift */; };
+		2721586126DCDB5B005A1F00 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721586026DCDB5B005A1F00 /* SettingsViewController.swift */; };
+		2721586326DEB933005A1F00 /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721586226DEB933005A1F00 /* SettingsStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		2721585526DACEBD005A1F00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2721585C26DAD262005A1F00 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		2721585E26DAD401005A1F00 /* JokeGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeGetter.swift; sourceTree = "<group>"; };
+		2721586026DCDB5B005A1F00 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2721586226DEB933005A1F00 /* SettingsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +48,6 @@
 		2721583B26DACEBC005A1F00 = {
 			isa = PBXGroup;
 			children = (
-				2721585B26DAD24D005A1F00 /* Model */,
 				2721584626DACEBC005A1F00 /* Get a Joke */,
 				2721584526DACEBC005A1F00 /* Products */,
 			);
@@ -61,6 +64,7 @@
 		2721584626DACEBC005A1F00 /* Get a Joke */ = {
 			isa = PBXGroup;
 			children = (
+				2721585B26DAD24D005A1F00 /* Model */,
 				2721584726DACEBC005A1F00 /* AppDelegate.swift */,
 				2721584926DACEBC005A1F00 /* SceneDelegate.swift */,
 				2721584B26DACEBC005A1F00 /* ViewController.swift */,
@@ -68,6 +72,7 @@
 				2721585026DACEBD005A1F00 /* Assets.xcassets */,
 				2721585226DACEBD005A1F00 /* LaunchScreen.storyboard */,
 				2721585526DACEBD005A1F00 /* Info.plist */,
+				2721586026DCDB5B005A1F00 /* SettingsViewController.swift */,
 			);
 			path = "Get a Joke";
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 			children = (
 				2721585C26DAD262005A1F00 /* Joke.swift */,
 				2721585E26DAD401005A1F00 /* JokeGetter.swift */,
+				2721586226DEB933005A1F00 /* SettingsStorage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,8 +160,10 @@
 				2721584C26DACEBC005A1F00 /* ViewController.swift in Sources */,
 				2721585F26DAD401005A1F00 /* JokeGetter.swift in Sources */,
 				2721584826DACEBC005A1F00 /* AppDelegate.swift in Sources */,
+				2721586326DEB933005A1F00 /* SettingsStorage.swift in Sources */,
 				2721585D26DAD262005A1F00 /* Joke.swift in Sources */,
 				2721584A26DACEBC005A1F00 /* SceneDelegate.swift in Sources */,
+				2721586126DCDB5B005A1F00 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

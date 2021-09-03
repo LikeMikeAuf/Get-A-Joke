@@ -7,11 +7,6 @@
 
 import Foundation
 
-//enum JokeType {
-//    case single
-//    case twopart
-//}
-
 protocol JokeProtocol {
     var type: String? { get set }
     var joke: String? { get set }
