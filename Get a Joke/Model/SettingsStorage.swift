@@ -14,20 +14,24 @@ protocol SettingsStorageProtocol {
 
 class SettingsStorage: SettingsStorageProtocol {
     
-    var settings: [String: Bool] = [
-        "nsfw": true,
-        "religious": true,
-        "political": true,
-        "racist": true,
-        "sexist": true,
-        "explicit": true
-    ]
+    var userDefaults = UserDefaults.standard
+    let userDefaultsFlagsKey: String = "Flags To Blacklist"
+    
+//    var settings: [String: Bool] = [
+//        "nsfw": true,
+//        "religious": true,
+//        "political": true,
+//        "racist": true,
+//        "sexist": true,
+//        "explicit": true
+//    ]
     
     func getSetteings() -> [String: Bool] {
-        return settings
+        let flagsToBlacklist = userDefaults.object(forKey: userDefaultsFlagsKey) as? [String: Bool] ?? ["": true]
+        return flagsToBlacklist
     }
     
-    func saveSettings(_ settings: [String : Bool]) {
-        self.settings = settings
+    func saveSettings(_ settings: [String: Bool]) {
+        userDefaults.set(settings, forKey: userDefaultsFlagsKey)
     }
 }

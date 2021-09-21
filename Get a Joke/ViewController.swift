@@ -25,10 +25,6 @@ class ViewController: UIViewController {
         }
     }
     
-    func printJoke(text: String) {
-        self.textField.text = text
-    }
-    
     @IBAction func showSettingsScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let navigationController = storyboard.instantiateViewController(identifier: "NavigationController") as UINavigationController
