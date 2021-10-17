@@ -13,17 +13,21 @@ protocol JokeGetterProtocol {
 
 class JokeGetter: JokeGetterProtocol {
     
+    var storageController = JokeStorageController()
+    
     func getJoke(_ settings: [String: Bool], handler: @escaping (String) -> Void) {
         let url: URL = prepareURL(settings)
         var request: URLRequest = URLRequest(url: url)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = ["AuthToken": "null"]
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//            print(String(decoding: data!, as: UTF8.self))
-//            print(response)
-//            print(error)
             if let data = data, let joke = try? JSONDecoder().decode(JokeJSON.self, from: data) {
 //                print(String(decoding: data, as: UTF8.self))
+                
+                // Saving new joke to CoreData
+                self.storageController.saveNewJoke(joke)
+                
+                // Extracting text of joke from single/twopart format
                 let string: String = self.prepareJoke(joke: joke)
                 DispatchQueue.main.async {
                     handler(string)

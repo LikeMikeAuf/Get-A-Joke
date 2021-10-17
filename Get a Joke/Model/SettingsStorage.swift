@@ -17,15 +17,6 @@ class SettingsStorage: SettingsStorageProtocol {
     var userDefaults = UserDefaults.standard
     let userDefaultsFlagsKey: String = "Flags To Blacklist"
     
-//    var settings: [String: Bool] = [
-//        "nsfw": true,
-//        "religious": true,
-//        "political": true,
-//        "racist": true,
-//        "sexist": true,
-//        "explicit": true
-//    ]
-    
     func getSetteings() -> [String: Bool] {
         let flagsToBlacklist = userDefaults.object(forKey: userDefaultsFlagsKey) as? [String: Bool] ?? ["": true]
         return flagsToBlacklist

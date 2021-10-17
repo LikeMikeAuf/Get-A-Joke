@@ -11,7 +11,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     @IBOutlet var textField: UITextView!
@@ -27,10 +26,16 @@ class ViewController: UIViewController {
     
     @IBAction func showSettingsScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let navigationController = storyboard.instantiateViewController(identifier: "NavigationController") as UINavigationController
+        let navigationController = storyboard.instantiateViewController(identifier: "NavigationSettingsController") as UINavigationController
         let settingsScreen = navigationController.viewControllers.first as! SettingsViewController
         settingsScreen.settings = settingsStorage.getSetteings()
         settingsScreen.settingsStorage = settingsStorage
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    @IBAction func showSavedJokes() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = storyboard.instantiateViewController(identifier: "SavedJokesNavigationController") as UINavigationController
         self.present(navigationController, animated: true, completion: nil)
     }
 }

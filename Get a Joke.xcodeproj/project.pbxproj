@@ -17,6 +17,15 @@
 		2721585F26DAD401005A1F00 /* JokeGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721585E26DAD401005A1F00 /* JokeGetter.swift */; };
 		2721586126DCDB5B005A1F00 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721586026DCDB5B005A1F00 /* SettingsViewController.swift */; };
 		2721586326DEB933005A1F00 /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721586226DEB933005A1F00 /* SettingsStorage.swift */; };
+		2721586626FA042C005A1F00 /* DataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2721586426FA042C005A1F00 /* DataStorage.xcdatamodeld */; };
+		272158DD270A0327005A1F00 /* JokeStorage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272158D9270A0327005A1F00 /* JokeStorage+CoreDataClass.swift */; };
+		272158E3270A04BD005A1F00 /* FlagsStorage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272158E1270A04BD005A1F00 /* FlagsStorage+CoreDataClass.swift */; };
+		272158E4270A04BD005A1F00 /* FlagsStorage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272158E2270A04BD005A1F00 /* FlagsStorage+CoreDataProperties.swift */; };
+		272158E6270A069A005A1F00 /* JokeStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272158E5270A069A005A1F00 /* JokeStorageController.swift */; };
+		272158E8270A0E15005A1F00 /* SavedJokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272158E7270A0E15005A1F00 /* SavedJokesViewController.swift */; };
+		272158ED270A33ED005A1F00 /* JokeStorage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272158EC270A33ED005A1F00 /* JokeStorage+CoreDataProperties.swift */; };
+		2773D157271C482100E934DC /* JokePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2773D156271C482100E934DC /* JokePresentViewController.swift */; };
+		2773D15C271C763700E934DC /* FlagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2773D15B271C763700E934DC /* FlagsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +41,15 @@
 		2721585E26DAD401005A1F00 /* JokeGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeGetter.swift; sourceTree = "<group>"; };
 		2721586026DCDB5B005A1F00 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2721586226DEB933005A1F00 /* SettingsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
+		2721586526FA042C005A1F00 /* DataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataStorage.xcdatamodel; sourceTree = "<group>"; };
+		272158D9270A0327005A1F00 /* JokeStorage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JokeStorage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		272158E1270A04BD005A1F00 /* FlagsStorage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlagsStorage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		272158E2270A04BD005A1F00 /* FlagsStorage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlagsStorage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		272158E5270A069A005A1F00 /* JokeStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeStorageController.swift; sourceTree = "<group>"; };
+		272158E7270A0E15005A1F00 /* SavedJokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedJokesViewController.swift; sourceTree = "<group>"; };
+		272158EC270A33ED005A1F00 /* JokeStorage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JokeStorage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2773D156271C482100E934DC /* JokePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokePresentViewController.swift; sourceTree = "<group>"; };
+		2773D15B271C763700E934DC /* FlagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,15 +82,16 @@
 		2721584626DACEBC005A1F00 /* Get a Joke */ = {
 			isa = PBXGroup;
 			children = (
+				2773D15A271C75E000E934DC /* View */,
+				272158E9270A0ECE005A1F00 /* ViewControllers */,
+				272158D0270A01E9005A1F00 /* Storage */,
 				2721585B26DAD24D005A1F00 /* Model */,
 				2721584726DACEBC005A1F00 /* AppDelegate.swift */,
 				2721584926DACEBC005A1F00 /* SceneDelegate.swift */,
-				2721584B26DACEBC005A1F00 /* ViewController.swift */,
 				2721584D26DACEBC005A1F00 /* Main.storyboard */,
 				2721585026DACEBD005A1F00 /* Assets.xcassets */,
 				2721585226DACEBD005A1F00 /* LaunchScreen.storyboard */,
 				2721585526DACEBD005A1F00 /* Info.plist */,
-				2721586026DCDB5B005A1F00 /* SettingsViewController.swift */,
 			);
 			path = "Get a Joke";
 			sourceTree = "<group>";
@@ -83,8 +102,40 @@
 				2721585C26DAD262005A1F00 /* Joke.swift */,
 				2721585E26DAD401005A1F00 /* JokeGetter.swift */,
 				2721586226DEB933005A1F00 /* SettingsStorage.swift */,
+				272158E5270A069A005A1F00 /* JokeStorageController.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		272158D0270A01E9005A1F00 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2721586426FA042C005A1F00 /* DataStorage.xcdatamodeld */,
+				272158E1270A04BD005A1F00 /* FlagsStorage+CoreDataClass.swift */,
+				272158E2270A04BD005A1F00 /* FlagsStorage+CoreDataProperties.swift */,
+				272158D9270A0327005A1F00 /* JokeStorage+CoreDataClass.swift */,
+				272158EC270A33ED005A1F00 /* JokeStorage+CoreDataProperties.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		272158E9270A0ECE005A1F00 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2721584B26DACEBC005A1F00 /* ViewController.swift */,
+				2721586026DCDB5B005A1F00 /* SettingsViewController.swift */,
+				272158E7270A0E15005A1F00 /* SavedJokesViewController.swift */,
+				2773D156271C482100E934DC /* JokePresentViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2773D15A271C75E000E934DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2773D15B271C763700E934DC /* FlagsCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,11 +210,20 @@
 			files = (
 				2721584C26DACEBC005A1F00 /* ViewController.swift in Sources */,
 				2721585F26DAD401005A1F00 /* JokeGetter.swift in Sources */,
+				272158E3270A04BD005A1F00 /* FlagsStorage+CoreDataClass.swift in Sources */,
+				272158E8270A0E15005A1F00 /* SavedJokesViewController.swift in Sources */,
 				2721584826DACEBC005A1F00 /* AppDelegate.swift in Sources */,
 				2721586326DEB933005A1F00 /* SettingsStorage.swift in Sources */,
 				2721585D26DAD262005A1F00 /* Joke.swift in Sources */,
 				2721584A26DACEBC005A1F00 /* SceneDelegate.swift in Sources */,
+				272158E6270A069A005A1F00 /* JokeStorageController.swift in Sources */,
+				2773D157271C482100E934DC /* JokePresentViewController.swift in Sources */,
 				2721586126DCDB5B005A1F00 /* SettingsViewController.swift in Sources */,
+				272158DD270A0327005A1F00 /* JokeStorage+CoreDataClass.swift in Sources */,
+				2773D15C271C763700E934DC /* FlagsCollectionViewCell.swift in Sources */,
+				272158E4270A04BD005A1F00 /* FlagsStorage+CoreDataProperties.swift in Sources */,
+				272158ED270A33ED005A1F00 /* JokeStorage+CoreDataProperties.swift in Sources */,
+				2721586626FA042C005A1F00 /* DataStorage.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +425,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2721586426FA042C005A1F00 /* DataStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2721586526FA042C005A1F00 /* DataStorage.xcdatamodel */,
+			);
+			currentVersion = 2721586526FA042C005A1F00 /* DataStorage.xcdatamodel */;
+			path = DataStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2721583C26DACEBC005A1F00 /* Project object */;
 }

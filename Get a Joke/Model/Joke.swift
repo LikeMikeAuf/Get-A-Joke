@@ -14,11 +14,11 @@ protocol JokeProtocol {
     var delivery: String? { get set }
 }
 
-struct Joke: JokeProtocol {
+struct SavedJoke: Codable {
+    var category, setup, delivery, joke: String?
     var type: String?
-    var joke: String?
-    var setup: String?
-    var delivery: String?
+    var id: Int?
+    var flags: Flags?
 }
 
 struct JokeJSON: Codable, JokeProtocol {

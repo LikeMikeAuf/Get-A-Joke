@@ -24,9 +24,9 @@ class SettingsViewController: UITableViewController {
         prepareSwitches(settings)
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(true)
-//    }
+    @IBAction func doneButtonPressed() {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
@@ -62,5 +62,9 @@ class SettingsViewController: UITableViewController {
         } else {
             return 1
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
