@@ -35,6 +35,9 @@ class JokePresentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        overrideUserInterfaceStyle = .light
+        
         self.title = "Joke #\(joke.id!)"
         
         categoryLabel.text = joke.category

@@ -36,12 +36,25 @@ class JokeStorageController: JokeStorageControllerProtocol {
         let requestForExistingFlags = NSFetchRequest<NSManagedObject>(entityName: "FlagsStorage")
         var existingFlags: [NSManagedObject] = []
         
-        existingFlags = try! context.fetch(requestForExistingFlags)
+        let requestForExistingJokes = NSFetchRequest<JokeStorage>(entityName: "JokeStorage")
+        var existingJokes: [JokeStorage] = []
         
-//      Creating new Joke instance
+        do {
+            existingFlags = try context.fetch(requestForExistingFlags)
+            existingJokes = try context.fetch(requestForExistingJokes)
+        } catch {
+            print("An error occured while fetching data from storage")
+        }
         
+        for item in existingJokes {
+            if item.id == jokeToSave.id! {
+                return
+            }
+        }
+        
+        //      Creating new Joke instance
         let joke = JokeStorage(context: context)
-
+        
         joke.category = jokeToSave.category
         joke.type = jokeToSave.type
         if jokeToSave.type == "twopart" {
@@ -52,8 +65,7 @@ class JokeStorageController: JokeStorageControllerProtocol {
         }
         joke.id = Int16(jokeToSave.id!)
         
-//        Checking for existing flags
-        
+        //        Checking for existing flags
         for flag in existingFlags {
             
             let castedFlag = flag as! FlagsStorage
@@ -68,7 +80,11 @@ class JokeStorageController: JokeStorageControllerProtocol {
                 castedFlag.addToMatchingJokes(joke)
                 joke.flag = castedFlag
                 
-                try! context.save()
+                do {
+                    try context.save()
+                } catch {
+                    print("An error occured while saving data to storage")
+                }
                 
                 print("Used existing flag set")
                 
@@ -76,8 +92,7 @@ class JokeStorageController: JokeStorageControllerProtocol {
             }
         }
         
-//        If there's no existing flagset in storage
-        
+        //        If there's no existing flagset in storage
         if joke.flag == nil {
             
             let flags = FlagsStorage(context: context)
@@ -92,7 +107,11 @@ class JokeStorageController: JokeStorageControllerProtocol {
             flags.addToMatchingJokes(joke)
             joke.flag = flags
             
-            try! context.save()
+            do {
+                try context.save()
+            } catch {
+                print("An error occured while saving data to storage")
+            }
             
             print("Created new flag set")
         }
